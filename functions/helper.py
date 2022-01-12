@@ -8,11 +8,8 @@ def read_file(file_name):
     return data
 
 
-def write_file(new_file_name, data):
+def write_file(new_file_name, write_pack):
     with open(new_file_name, 'w+b') as file:
-        write_pack = []
-        for x in data:
-            write_pack.append(x)
         file.write(bytes(write_pack))
     print('File was written')
 
@@ -25,3 +22,18 @@ def read_description():
     except FileNotFoundError:
         print('File Not Found')
         exit()
+
+
+def to_bits(text):
+    result = []
+    for i in bytearray(text, 'utf-8'):
+        result.append(i)
+    return result
+
+
+def from_bits(bits):
+    result = []
+    for x in bits:
+        result.append(int(x))
+    result = bytearray(result).decode()
+    return result

@@ -1,5 +1,6 @@
 def decompress(pack):
 
+    write_pack = []
     unpack = []
     i = 0
     ind = 200
@@ -20,4 +21,7 @@ def decompress(pack):
         unpack.append(pack[i])
         i += 1
 
-    return unpack
+    for x in unpack:
+        write_pack.append(x)
+
+    return write_pack

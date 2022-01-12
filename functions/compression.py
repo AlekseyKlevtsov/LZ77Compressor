@@ -1,6 +1,7 @@
 def compress(data):
+
     src = []
-    for b in src:
+    for b in data:
         src.append(int(b))
 
     ind = 200

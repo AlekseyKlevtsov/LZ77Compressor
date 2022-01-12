@@ -12,13 +12,11 @@ Arguments:
     <num1>       First Number
     <num2>       Second Number
 
-
 Options:
-
     -h, --help          Show this screen.
     -v, --version       Show version
-"""
 
+"""
 from docopt import docopt
 import functions.compression as cs
 import functions.decompression as dcs
@@ -26,25 +24,28 @@ import functions.helper as hp
 
 
 def run_compress():
-    pack = hp.read_file(file_name)
-    data = cs.compress(pack)
-    hp.write_file(new_file_name, data)
+    data = hp.read_file(file_name)
+    pack = cs.compress(data)
+    hp.write_file(new_file_name, pack)
 
 
 def run_decompress():
-    unpack = hp.read_file(file_name)
-    data = dcs.decompress(unpack)
-    hp.write_file(new_file_name, data)
+    data = hp.read_file(file_name)
+    unpack = dcs.decompress(data)
+    hp.write_file(new_file_name, unpack)
 
 
 def run_text_compress():
-    data = cs.compress(text)
-    print('\n' + data)
+    code_text = hp.to_bits(text)
+    data = cs.compress(code_text)
+    print(" ".join(map(str, data)))
 
 
 def run_text_decompress():
-    data = dcs.decompress(text)
-    print('\n' + data)
+    code_text = text.split()
+    data = dcs.decompress(code_text)
+    result = hp.from_bits(data)
+    print(result)
 
 
 def description():
@@ -58,17 +59,26 @@ if __name__ == '__main__':
 
     if arguments['compress']:
         run_compress()
+
     elif arguments['decompress']:
         run_decompress()
+
     elif arguments['text']:
         if arguments['-c']:
             text = input()
+            print()
             run_text_compress()
-    elif arguments['text']:
-        if arguments['-c']:
+
+        elif arguments['-d']:
             text = input()
+            print()
             run_text_decompress()
+        else:
+            print('view the documentation')
+            print(arguments)
+
     elif arguments['description']:
         description()
     else:
+        print('view the documentation')
         print(arguments)
