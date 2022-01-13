@@ -1,3 +1,6 @@
+
+# data decompression function
+
 def decompress(pack):
 
     write_pack = []

@@ -1,3 +1,6 @@
+
+# data compression function
+
 def compress(data):
 
     src = []
