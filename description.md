@@ -1,5 +1,8 @@
 Name: 
-    L77 Compressor
+    LZ77 Compressor
+
+Languages:
+    Python
 
 Usage:
     main.py compress <name1> <name2>
