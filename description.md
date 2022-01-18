@@ -4,6 +4,9 @@ Name:
 Languages:
     Python
 
+Using library:
+    docopt
+
 Usage:
     main.py compress <name1> <name2>
     main.py decompress <name1> <name2>
@@ -21,7 +24,7 @@ Options:
     -v, --version  Show version
 
 Version: 
-    LZ 1.2.0
+    LZ 1.2.1
 
 Author: 
     Aleksey Klevtsov - GitHub

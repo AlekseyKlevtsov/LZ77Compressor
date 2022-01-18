@@ -1,3 +1,8 @@
+"""
+:authors: AlekseyKlevtsov
+:license: Mozilla Public License 2.0, see LICENSE file
+"""
+
 # data byte read function
 
 def read_file(file_name):
@@ -30,6 +35,7 @@ def read_documentation():
         exit()
     return print(data)
 
+
 # function to convert string to byte array
 
 def to_bits(text):
@@ -37,6 +43,7 @@ def to_bits(text):
     for i in bytearray(text, 'utf-8'):
         result.append(i)
     return result
+
 
 # byte array to string conversion function
 

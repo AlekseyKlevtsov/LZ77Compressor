@@ -1,3 +1,7 @@
+"""
+:authors: AlekseyKlevtsov
+:license: Mozilla Public License 2.0, see LICENSE file
+"""
 
 # data compression function
 
