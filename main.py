@@ -1,8 +1,4 @@
 """
-:authors: AlekseyKlevtsov
-:license: Mozilla Public License 2.0, see LICENSE file
-"""
-"""
 Usage:
     main.py compress <name1> <name2>
     main.py decompress <name1> <name2>
