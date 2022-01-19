@@ -87,6 +87,10 @@ main.py documentation
 ```
 ![Снимок экрана 2022-01-13 031103](https://user-images.githubusercontent.com/80210745/149243053-d753da17-ab1f-49d0-83a8-d984dddb0d04.png)
 
+#### *Example*
+
+![Снимок экрана от 2022-01-19 09-32-36](https://user-images.githubusercontent.com/80210745/150076884-5f8c512d-ca87-4a8e-85cf-7c9abf3a9957.png)
+
 ## Authors
 
 * **Aleksey klevtsov** - [GitHub](https://github.com/AlekseyKlevtsov)
